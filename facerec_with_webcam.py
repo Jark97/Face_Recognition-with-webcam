@@ -7,7 +7,7 @@ name = 'PERSON'
 print("PREMI 'Q' PER USCIRE...")
 while True:
     ret, frame = webcam.read()                               #legge frame dalla webcam
-    resized = cv2.resize(frame, (0, 0), fx = 1, fy = 1)  #ridimenziono finestra webcam
+    resized = cv2.resize(frame, (0, 0), fx = 1, fy = 1)      #ridimenziono finestra webcam
     rgb_image = resized[:,:,::-1]
     for (top, right, bottom, left) in face_recognition.face_locations(rgb_image):
         cv2.rectangle(resized, (left, top), (right, bottom), (0, 0, 255))
@@ -19,3 +19,5 @@ while True:
 
 webcam.release()
 cv2.destroyAllWindows()
+
+# NOTA: non chiamare il file python con "face_recognition" in quanto creerebbe conflitto con il modulo!!!
