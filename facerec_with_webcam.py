@@ -20,4 +20,4 @@ while True:
 webcam.release()
 cv2.destroyAllWindows()
 
-# NOTA: non chiamare il file python con "face_recognition" in quanto creerebbe conflitto con il modulo!!!
+# NOTA: non chiamare il file python con "face_recognition" in quanto creerebbe conflitto con la libreria!!!
